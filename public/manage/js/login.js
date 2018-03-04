@@ -77,7 +77,7 @@ $(function () {
       success:function (data) {
         //如果成功，就跳转到首页
         if(data.success){
-          location.href = "index.html";
+          location.href = "login.html";
         }
 
         if(data.error === 1000){
