@@ -53,7 +53,7 @@ $(function () {
             success:function(info){
                 console.log(info);
                 if(info.success){
-                    //location.href="index.html";
+                    location.href="index.html";
                 }
                 if(info.error==1000){
                     $form.data('bootstrapValidator').updateStatus('username','INVALID','callback')
