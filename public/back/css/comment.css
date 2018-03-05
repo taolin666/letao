@@ -115,4 +115,8 @@ a:link, a:visited, a:hover, a:active {
     width: 45%;
     height: 400px;
 }
+.table_hover thead tr th{
+    text-align: center;
+    color: #333;
+}
 
