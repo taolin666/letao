@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>乐淘移动-搜索页</title>
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css"/>
+    <link rel="stylesheet" href="css/comment.css"/>
+    <link rel="stylesheet" href="css/search.css"/>
+</head>
+<body>
+<div class="lt_container">
+    <!-- 头部-->
+    <div class="lt_header">
+        <a href="#" class="icon_left"><span class="logout mui-icon mui-icon-arrowleft"></span></a>
+        <h4 class="title">搜索中心</h4>
+    </div>
+    <!-- 主体内容-->
+    <div class="lt_main">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="search">
+                        <input type="text" class="search_text" placeholder="请输入关键字"/>
+                        <button class="mui-btn mui-btn-blue search_btn">搜索</button>
+                    </div>
+                    <div class="history">
+                        <div class="history-tit mui-clearfix">
+                            <span class="mui-pull-left">搜索历史</span>
+                            <span class="mui-pull-right fa fa-trash btn_empty">清空历史</span>
+                        </div>
+                        <ul class="history-content">
+                            <li class="mui-clearfix">
+                                <a href="#">
+                                    <span class="mui-pull-left ">333</span>
+                                </a>
+                                <span class="mui-icon mui-icon-closeempty mui-pull-right btn_delete"></span>
+                            </li>
+                            <li class="mui-clearfix">
+                                <a href="#">
+                                    <span class="mui-pull-left ">333</span>
+                                </a>
+                                <span class="mui-icon mui-icon-closeempty mui-pull-right btn_delete"></span>
+                            </li>
+                            <li class="mui-clearfix">
+                                <a href="#">
+                                    <span class="mui-pull-left ">333</span>
+                                </a>
+                                <span class="mui-icon mui-icon-closeempty mui-pull-right btn_delete"></span>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li >
+                <a href="index.html" >
+                    <span class="fa fa-home "></span>
+                    <p>首页</p>
+                </a>
+            </li >
+            <li>
+                <a href="#" >
+                    <span class="fa fa-bars "></span>
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="fa fa-shopping-cart"></span>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <span class="fa fa-user"></span>
+                    <p>会员中心</p>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/comment.js"></script>
+<script src="js/search.js"></script>
+
+<!--模板-->
+<script type="text/html" id="tmp">
+    {{if arr.length===0}}
+    <p>没有历史记录</p>
+    {{else}}
+    <div class="history-tit mui-clearfix">
+        <span class="mui-pull-left">搜索历史</span>
+        <span class="mui-pull-right fa fa-trash btn_empty">清空历史</span>
+    </div>
+    <ul class="history-content">
+        {{each arr v i}}
+        <li class="mui-clearfix" >
+            <a href="#">
+                <span class="mui-pull-left ">{{v}}</span>
+            </a>
+            <span class="mui-icon mui-icon-closeempty mui-pull-right btn_delete" data-id={{i}}></span>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</script>
+

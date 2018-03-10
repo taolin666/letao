@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+.content{
+    position: relative;
+}
+.content-tit{
+    height: 30px;
+    width: 100%;
+    background-color: #eee;
+}
+.content-tit a{
+    width: 25%;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    float: left;
+}
+.content-tit a.now{
+    color: darkorange;
+}
+
+.content-main{
+}
+.content-main a{
+    display: block;
+    width: 48%;
+    float: left;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+.content-main a .price{
+    color: red;
+}
+.content-main a .oldPrice{
+    text-decoration: line-through;
+}
+.content-main a img{
+    width: 100%;
+}
+
+ /*.content .load{*/
+    /*width: 40px;*/
+    /*height: 40px;*/
+    /*border: 3px solid blue;*/
+     /*background-color: red;*/
+    /*position: absolute;*/
+    /*top: 200px;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+    /*animation: play 2s infinite linear;*/
+/*}*/
+/*@keyframes play {*/
+    /*from{*/
+        /*transform:  translateX(-50%) rotate(0deg);*/
+
+    /*}*/
+    /*to{*/
+        /*transform:  translateX(-50%) rotate(360deg);*/
+    /*}*/
+/*}*/
+
+.load {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid #069;
+    animation: play 1s infinite ease-in-out;
+}
+
+@keyframes play {
+    from {
+        transform:translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform:translateX(-50%) rotate(360deg);
+    }
+}

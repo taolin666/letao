@@ -1,0 +1,9 @@
+.myForm{
+    padding: 10px;
+}
+[name="vCode"]{
+    width: 65%;
+}
+.btn_code{
+    width: 35%;
+}

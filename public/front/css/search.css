@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+
+
+
+.history{
+    padding: 10px;
+}
+.history .history-tit{
+    font-size: 12px;
+    color: #666;
+}
+.history .history-content{
+    width: 100%;
+    border: 1px dashed red;
+}
+.history-content li{
+    padding-left: 10px;
+    height: 30px;
+    border-bottom: 1px dashed red;
+}
+.history-content li:nth-last-child(1){
+    border-bottom: none;
+}
+.history-content a{
+    display: block;
+    font-size: 14px;
+    color: #007aff;
+    line-height: 30px;
+}
+.history-content span{
+    line-height: 30px;
+}
+
+.his_empty{
+    display: none;
+}

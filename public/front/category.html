@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>乐淘移动-分类页</title>
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css"/>
+    <link rel="stylesheet" href="css/comment.css"/>
+    <link rel="stylesheet" href="css/category.css"/>
+</head>
+<body>
+<div class="lt_container">
+    <!-- 头部-->
+    <div class="lt_header">
+        <a href="#" class="icon_left"><span class="logout fa fa-home"></span></a>
+        <h4 class="title">乐淘分类</h4>
+        <a href="search.html" class="icon_right"><span class="search fa fa-search "></span></a>
+    </div>
+    <!-- 主体内容-->
+    <div class="lt_main">
+        <div class="nav">
+        <!-- 侧边导航栏-->
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                    <ul class="mui-clearfix nav_aside">
+                        <!-- 侧边栏用模板-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- content-->
+        <div class="content">
+
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                    <ul class="content_info">
+                        <!--<li>-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/brand1.png" alt=""/>-->
+                                <!--<p>耐克</p>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li >
+                <a href="index.html" >
+                    <span class="fa fa-home "></span>
+                    <p>首页</p>
+                </a>
+            </li >
+            <li class="now">
+                <a href="#" >
+                    <span class="fa fa-bars "></span>
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="fa fa-shopping-cart"></span>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <span class="fa fa-user"></span>
+                    <p>会员中心</p>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/comment.js"></script>
+<script src="js/category.js"></script>
+
+<!--导航栏模板-->
+<script type="text/html" id="tmp_nav">
+        {{each rows v i}}
+        {{if i===0}}
+            <li class="now">
+                <a href="#" data-id="{{v.id}}">{{v.categoryName}}</a>
+            </li>
+        {{else}}
+        <li>
+            <a href="#" data-id="{{v.id}}">{{v.categoryName}}</a>
+        </li>
+        {{/if}}
+
+        {{/each}}
+</script>
+
+<!--内容模板-->
+<script type="text/html" id="tmp_info">
+    {{if rows.length==0}}
+    <p>该分类没有更多的品牌商品</p>
+    {{/if}}
+    {{each rows v i}}
+    <li>
+        <a href="#">
+            <img src="{{v.brandLogo}}" width="62" alt=""/>
+            <p>{{v.brandName}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>
